@@ -1,0 +1,31 @@
+# include <stdio.h>
+# include <stdlib.h>
+# include <math.h>
+int esprimo(long long int n){
+        if (n==1 || n%2==0)
+                return 0;
+        for (long long int i=3;i<=(long long int)sqrt( (n));i=i+2)
+            if(n%i==0)
+                return 0;
+    return 1;
+
+}
+
+int main(){
+    #define MAX 20000000
+    int c;
+    long long result=0;
+
+    result=2;
+    for(long long int c=1;c<MAX;c++){
+            if(esprimo(c)==1){
+                   // printf("primo: %d\n", c);
+                    result=result+c;
+            }
+            if(c%100000==0){
+                printf("\n\nVAMOS POR EL %lld\n\n", c);
+            }
+    }
+    printf("\nsuma de todos los primos hasta MAX %lld", result);
+    return 0;
+}
