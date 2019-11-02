@@ -1,0 +1,14 @@
+int main(){
+    #define MAX 1000
+    int a,b,c;
+    for(int c=1;c<MAX;c++){
+        for(int b=1;b<c;b++){
+            for(int a=0;a<b;a++){
+                if((a*a)+(b*b)==(c*c)&&a+b+c==MAX){
+                    printf("\n%d+%d+%d = 1000",a,b,c);
+                }
+            }
+        }
+    }
+    return 0;
+}
